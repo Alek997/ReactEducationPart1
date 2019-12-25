@@ -1,24 +1,50 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import List from "./components/List";
+
+const channels = [
+  {
+    name: "RTS1",
+    lcn: 1
+  },
+  {
+    name: "RTS2",
+    lcn: 2
+  },
+  {
+    name: "RTS3",
+    lcn: 3
+  },
+  {
+    name: "Pink",
+    lcn: 4
+  }
+];
+
+const channels2 = [
+  {
+    name: "HBO",
+    lcn: 1
+  },
+  {
+    name: "HBO2",
+    lcn: 2
+  },
+  {
+    name: "HBO3",
+    lcn: 3
+  },
+  {
+    name: "Pink",
+    lcn: 4
+  }
+];
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <List channels={channels} />
+      <List channels={channels2} />
     </div>
   );
 }
